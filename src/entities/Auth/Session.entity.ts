@@ -4,8 +4,8 @@ import { UserEntity } from '../User/User.entity';
 
 @Entity('tbl_session')
 export class SessionEntity extends BaseEntity {
-  @Column()
-  sessionToken: string;
+  @Column({ name: 'access_token' })
+  accessToken: string;
 
   @Column({ default: true })
   isActive: boolean;
